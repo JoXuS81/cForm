@@ -1,0 +1,176 @@
+/* 
+
+TABLE OF CONTENTS
+
+1. Section Loader
+ 1.1 CreativY
+ 1.2 Squares Container
+2. Work with Different Screen Sizes
+
+*/
+
+
+// Section Loader
+.loader_section {
+    flex-direction:column;
+    height:100vh;
+    margin:auto auto;
+    // CreativY
+    .creativ {
+        margin-bottom:40px;
+        h4 {
+            color:$white;
+            font-family:gugi;
+            font-size:36px;
+            span {
+                color:$red;
+                position:relative;
+                right:10px;
+            }
+        }
+    }
+    // Squares Container
+    .square_container {
+        display:flex;
+        list-style-type:none;
+        position:relative;
+        .square {
+            animation:rotating 2s ease infinite;
+            border-radius:7px;
+            height:30px;
+            margin:4px;
+            width:30px;
+        }
+        .square1 {
+            animation-delay:.2s;
+            background:$dark6; 
+        };
+        .square2 {
+            animation-delay:.4s;
+            background:$dark5;
+        };
+        .square3 {
+            animation-delay:.6s;
+            background:$dark1;
+        };
+        .square4 {
+            animation-delay:.8s;
+            background:$dark7;
+        };
+        .square5 {
+            animation-delay:1s;
+            background:$dark8;
+        }
+    }
+}
+
+
+.hide_loader { 
+    display:none !important; 
+}
+
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(90deg) scale(.6);
+    }
+    100% {
+        transform: rotate(90deg) scale(1);
+    }
+}
+
+
+// Work with Different Screen Sizes
+@media (min-width:1921px) and (max-width:2400px) {
+    .loader_section {
+        .creativ {
+            margin-bottom:50px;
+            h4 {
+                font-size:45px;
+                span {
+                    right:12.5px;
+                }
+            }
+        }
+        .square_container {
+            .square {
+                border-radius:8.7px;
+                height:37px;
+                margin:5px;
+                width:37px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px) {
+    .loader_section {
+        .creativ {
+            margin-bottom:62px;
+            h4 {
+                font-size:56px;
+                span {
+                    right:15.6px;
+                }
+            }
+        }
+        .square_container {
+            .square {
+                border-radius:10.8px;
+                height:46px;
+                margin:6.2px;
+                width:46px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px) {
+    .loader_section {
+        .creativ {
+            margin-bottom:77px;
+            h4 {
+                font-size:70px;
+                span {
+                    right:19.5px;
+                }
+            }
+        }
+        .square_container {
+            .square {
+                border-radius:13.5px;
+                height:57px;
+                margin:7.7px;
+                width:57px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px) {
+    .loader_section {
+        .creativ {
+            margin-bottom:96px;
+            h4 {
+                font-size:87px;
+                span {
+                    right:24.3px;
+                }
+            }
+        }
+        .square_container {
+            .square {
+                border-radius:16.8px;
+                height:71px;
+                margin:9.6px;
+                width:71px;
+            }
+        }
+    }
+}
